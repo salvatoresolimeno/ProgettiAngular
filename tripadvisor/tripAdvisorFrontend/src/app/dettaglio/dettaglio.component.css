@@ -1,0 +1,15 @@
+.informazioni{
+    align-items: baseline;
+
+}
+.img_profilo{
+  
+        object-fit: cover;
+        height:55px;
+        width:55px;
+    
+}
+.refs{
+    margin-bottom: 100px;
+
+}

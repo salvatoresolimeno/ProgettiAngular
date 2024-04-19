@@ -1,0 +1,20 @@
+<div class="container ">
+    <div class="row justify-content-center">
+    <div class="card mb-3 m-3" style="max-width: 540px;"  *ngFor="let bar of listaBar">
+        <div class="row ">
+            <div class="col-md-4">
+                <img src="https://saneb.care/wp-content/uploads/sites/3/2022/08/2130045_w2451h2451c1cx914cy621cxt0cyt0cxb2451cyb1222.jpg"
+                    class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title">{{bar.nome}}</h5>
+                    <p class="card-text">{{bar.indirizzo}}</p>
+                    <p class="card-text"><small class="text-body-secondary">{{bar.tel}}</small></p>
+                    <p ><button type="button" class="btn btn-light" [routerLink]="'/dettaglio/'+bar.id" >Dettagli</button></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>

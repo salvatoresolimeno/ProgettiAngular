@@ -1,0 +1,35 @@
+<div class="container bg-white p-5 rounded shadow-sm">
+    <h1 class="text-center display-4">Registrazione</h1>
+    <form [formGroup]="form" (ngSubmit)="registrati()" class="col-6 mx-auto py-5 px-0">
+        <div class="form-group input-group input-group-lg">
+            <div class="input-group-prepend">
+                <span class="input-group-text rounded-0" id="inputGroup-sizing-lg">Nome</span>
+            </div>
+            <input type="text" class="form-control rounded-0 text-center font-weight-bold" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" formControlName="nome">
+        </div>
+        <div class="form-group input-group input-group-lg">
+            <div class="input-group-prepend">
+                <span class="input-group-text rounded-0" id="inputGroup-sizing-lg">Cognome</span>
+            </div>
+            <input type="text" class="form-control rounded-0 text-center font-weight-bold" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" formControlName="cognome">
+        </div>
+        <div class="form-group input-group input-group-lg">
+            <div class="input-group-prepend">
+                <span class="input-group-text rounded-0" id="inputGroup-sizing-lg">Email</span>
+            </div>
+            <input type="email" class="form-control rounded-0 text-center font-weight-bold" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" formControlName="email">
+        </div>
+        <div class="form-group input-group input-group-lg">
+            <div class="input-group-prepend">
+                <span class="input-group-text rounded-0" id="inputGroup-sizing-lg">Password</span>
+            </div>
+            <input type="password" class="form-control rounded-0 text-center font-weight-bold" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" formControlName="password">
+        </div>
+        <div class="form-group">
+            <label for="foto">Foto profilo</label>
+            <input type="file" (change)="onFileChange($event)" accept="image/*" class="form-control-file">
+        </div>
+        <button type="submit" class="btn btn-lg btn-block btn-danger rounded-0">Registrati</button>
+    </form>
+</div>
+

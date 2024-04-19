@@ -1,0 +1,30 @@
+<h1 class="text-center display-4">Modifica una recensione</h1>
+<div class="container bg-white p-5 rounded shadow-sm">
+  <form [formGroup]="form" (ngSubmit)="modifica()">
+    <div class="form-group">
+      <label for="descrizione" class="font-weight-bold">Descrizione</label>
+      <textarea class="form-control border-0 bg-light shadow-none" id="descrizione" formControlName="descrizione" rows="5"></textarea>
+    </div>
+    <div class="form-row align-items-center">
+      <div class="col-auto">
+        <label for="data" class="font-weight-bold">Data</label>
+        <input type="date" class="form-control" id="data" formControlName="data">
+      </div>
+      <div class="col-auto">
+        <label for="voto" class="font-weight-bold">Voto</label>
+        <div class="input-group">
+          <input type="number" class="form-control" id="voto" formControlName="voto" min="1" max="5">
+          <div class="input-group-append">
+            <span class="input-group-text">/5</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="d-flex justify-content-end">
+      <button type="button" mat-button mat-dialog-close class="mr-3">Annulla</button>
+      <button type="submit" mat-button mat-dialog-close color="primary">Conferma</button>
+    </div>
+  </form>
+  <hr class="mb-0">
+</div>
+

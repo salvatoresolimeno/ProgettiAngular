@@ -1,0 +1,11 @@
+<div class="container bg-white p-5 rounded shadow-sm">
+  <h1 class="text-center display-4">Elimina una recensione</h1>
+  <p class="lead text-center">Sei sicuro di voler eliminare questa recensione ?</p>
+  <hr>
+  <p class="text-center">Una volta eliminato non sarà più possibile tornare indietro</p>
+  <div class="d-flex justify-content-end mt-3">
+    <button mat-stroked-button color="primary" mat-dialog-close>Annulla</button>
+    <button mat-raised-button color="accent" [mat-dialog-close]="true" cdkFocusInitial (click)="elimina()">Conferma</button>
+  </div>
+</div>
+

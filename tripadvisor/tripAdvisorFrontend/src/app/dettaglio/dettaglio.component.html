@@ -1,0 +1,67 @@
+<div class="container mt-4">
+  <div class="card">
+    <div class="row">
+      <div class="col-md-6">
+        <img
+          src="https://saneb.care/wp-content/uploads/sites/3/2022/08/2130045_w2451h2451c1cx914cy621cxt0cyt0cxb2451cyb1222.jpg"
+          class="img-fluid rounded-start"
+        />
+      </div>
+      <div class="col-md-6">
+        <div class="card-body">
+          <h3 class="card-title text-center">{{ bar.nome }}</h3>
+          <div class="d-flex justify-content-center">
+            <i class="fas fa-map-marker-alt"></i>
+            <a href="{{ bar.linkMaps }}">{{ bar.indirizzo }}</a>
+          </div>
+          <div class="d-flex justify-content-center">
+            <i class="fas fa-phone"></i>
+            <small class="text-muted">{{ bar.tel }}</small>
+          </div>
+          <div class="d-flex justify-content-center">
+            <button
+              type="button"
+              class="btn btn-primary mt-3"
+              (click)="openDialog()"
+            >
+              <i class="fas fa-plus"></i> Aggiungi recensione
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-4 refs">
+  <section
+    class="w-100 p-4"
+    style="border-radius: 0.5rem; background-color: #eee"
+  >
+    <h2 class="mb-4 text-center"><i class="fas fa-star"></i> Recensioni</h2>
+    <div class="card mb-3" *ngFor="let refs of listaRecensioni">
+      <div class="card-body">
+        <div class="informazioni d-flex">
+          <p class="card-text ">
+            <img class="rounded-circle img-fluid img_profilo"
+              [src]="transformImg(refs.utente.img)"
+              alt=""
+              width="50"
+              height="50"
+            />
+          </p>
+          <p class="card-text fw-bold m-0">
+             {{ refs.utente.nome }} {{ refs.utente.cognome }}
+          </p>
+        </div>
+        <p class="card-text">{{ refs.descrizione }}</p>
+        <div class="d-flex justify-content-end align-items-center">
+          <p class="fw-bold m-0 text-end">
+            <i class="fas fa-star"></i> {{ refs.voto }}/5
+          </p>
+          <p class="fw-light m-0 text-muted ms-2">({{ refs.data }})</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

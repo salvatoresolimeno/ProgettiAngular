@@ -1,0 +1,14 @@
+<div class="container bg-white p-5 rounded shadow-sm">
+    <form [formGroup]="form" (ngSubmit)="login()">
+      <div class="form-group">
+        <label for="email" class="font-weight-bold">Email:</label>
+        <input type="text" formControlName="email" class="form-control border-0 bg-light shadow-none" id="email" />
+        <label for="password" class="font-weight-bold">Password:</label>
+        <input type="password" formControlName="password" class="form-control border-0 bg-light shadow-none" id="password" />
+        <hr class="mb-0">
+        <button type="submit" class="btn btn-primary">Login</button>
+      </div>
+    </form>
+  </div>
+  
+  

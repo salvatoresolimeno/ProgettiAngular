@@ -1,0 +1,43 @@
+<nav class="navbar bg-body-tertiary">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img
+        src="https://static.tacdn.com/img2/brand_refresh/Tripadvisor_lockup_horizontal_secondary_registered.svg"
+        alt="Bootstrap"
+        width="150"
+        height="100"
+      />
+    </a>
+    <div class="button d-flex">
+      <button
+        class="btn btn-light"
+        [routerLink]="'/login'"
+        [ngClass]="{ 'd-none': log }"
+      >
+        Login
+      </button>
+      <button
+        class="btn btn-light"
+        [routerLink]="'/registrazione'"
+        [ngClass]="{ 'd-none': log }"
+      >
+        Registrati
+      </button>
+      <img
+        [src]="img"
+        class="rounded-circle img-fluid obj_fit"
+        
+        [ngClass]="{ 'd-none': !log }"
+        [routerLink]="'/profilo'"
+      />
+      <button
+        class="btn btn-light"
+        (click)="logout()"
+        [ngClass]="{ 'd-none': !log }"
+        [routerLink]="'/'"
+      >
+        Logout
+      </button>
+    </div>
+  </div>
+</nav>
